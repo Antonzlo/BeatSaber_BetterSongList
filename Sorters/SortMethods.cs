@@ -101,6 +101,7 @@ namespace BetterSongList {
 
 		internal static Dictionary<string, ISorter> methods = new Dictionary<string, ISorter>() {
 			{ "Song Name", alphabeticalSongname },
+			{ "Mapper Name", alphabeticalMapper },
 			{ "Download Date", downloadTime },
 			{ "SS Stars", stars },
 			{ "Song Length", songLength },
