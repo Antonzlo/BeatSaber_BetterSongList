@@ -49,7 +49,6 @@
     <None Remove="UI\BSML\SplitViews\Settings.bsml" />
     <None Remove="UI\DoubleArrowIcon.png" />
     <None Remove="UI\FavoritesIcon.png" />
-    <None Remove="UI\SongListBottomUI.bsml" />
   </ItemGroup>
 
   <ItemGroup>
