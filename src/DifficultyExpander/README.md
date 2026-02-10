@@ -7,7 +7,7 @@
 - Минимально вмешиваться в BetterSongList, использовать его публичное поле `HookLevelCollectionTableSet.sorter`.
 
 Требования к сборке:
-- .NET Framework 4.7.1 (или совместимая версия для модов Beat Saber).
+- .NET Framework 4.7.2 (или совместимая версия для модов Beat Saber).
 - Ссылки на UnityEngine.dll, 0Harmony.dll.
 - (Опционально) ссылки на сборки BetterSongList, если хочешь компилировать с интерфейсами.
 

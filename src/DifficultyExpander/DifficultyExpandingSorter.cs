@@ -81,13 +81,13 @@ public class DifficultyExpandingSorter {
         if (lvl == null) return null;
         try {
             var t = lvl.GetType();
-            var candidates = new[] { "previewDifficultyBeatmapSets", "difficultyBeatmapSets", "previewDifficultyBeatmapSets", "difficultyBeatmaps" };
+            var candidates = new[] { "previewDifficultyBeatmapSets", "difficultyBeatmapSets", "difficultyBeatmaps" };
             foreach (var name in candidates) {
                 var p = t.GetProperty(name, BindingFlags.Public | BindingFlags.NonPublic | BindingFlags.Instance);
                 if (p == null) continue;
                 var setsObj = p.GetValue(lvl) as IEnumerable;
                 if (setsObj == null) continue;
-                var res = new List<string>();
+                var res = new HashSet<string>(StringComparer.OrdinalIgnoreCase);
                 foreach (var set in setsObj) {
                     if (set == null) continue;
                     var inner = set.GetType().GetProperty("difficultyBeatmaps", BindingFlags.Public | BindingFlags.NonPublic | BindingFlags.Instance)?.GetValue(set) as IEnumerable
@@ -101,11 +101,11 @@ public class DifficultyExpandingSorter {
                         var val = diffProp?.GetValue(db);
                         if (val != null) {
                             var s = val.ToString();
-                            if (!string.IsNullOrEmpty(s) && !res.Contains(s, StringComparer.OrdinalIgnoreCase)) res.Add(s);
+                            if (!string.IsNullOrEmpty(s)) res.Add(s);
                         }
                     }
                 }
-                if (res.Count > 0) return res;
+                if (res.Count > 0) return res.ToList();
             }
         } catch { }
         return null;
