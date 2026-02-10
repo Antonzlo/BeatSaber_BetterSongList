@@ -25,7 +25,7 @@ The Game version(s) specific releases are compatible with are mentioned in the R
    - Ensure .NET Framework 4.8 SDK is installed
 
 2. **Beat Saber Installation**
-   - You need a modded Beat Saber installation with IPA (BepInEx Mod Loader)
+   - You need a modded Beat Saber installation with IPA (BeatSaber Mod Loader)
    - Install required dependencies via ModAssistant:
      - BSML (BeatSaberMarkupLanguage)
      - SongCore
@@ -135,7 +135,7 @@ Plugin.Log.Warn("Warning message");
 Plugin.Log.Error("Error message");
 ```
 
-Logs are written to `Beat Saber/Logs/[PluginName].log`
+Logs are written to `Beat Saber/Logs/_latest.log` (combined log for all mods)
 
 ### Troubleshooting
 
