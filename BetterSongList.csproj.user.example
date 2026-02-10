@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project>
+  <!--
+    This file tells the build process where to find your Beat Saber installation.
+    Copy this file to 'BetterSongList.csproj.user' and update the path to match your installation.
+    
+    The .csproj.user file is ignored by git to keep your local settings private.
+  -->
+  <PropertyGroup>
+    <!-- 
+      Set this to your Beat Saber installation directory.
+      This is used to:
+      1. Find game DLLs for compilation references
+      2. Automatically copy the compiled mod to your Plugins folder
+      
+      Examples:
+      Windows (Steam): C:\Program Files (x86)\Steam\steamapps\common\Beat Saber
+      Windows (Oculus): C:\Program Files\Oculus\Software\Software\hyperbolic-magnetism-beat-saber
+    -->
+    <BeatSaberDir>C:\Program Files (x86)\Steam\steamapps\common\Beat Saber</BeatSaberDir>
+  </PropertyGroup>
+</Project>

@@ -1,0 +1,31 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net472</TargetFramework>
+    <OutputType>Library</OutputType>
+    <RootNamespace>DifficultyExpander</RootNamespace>
+    <AssemblyName>DifficultyExpander</AssemblyName>
+    <LangVersion>8</LangVersion>
+    <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Include="DifficultyExpandingMod.cs" />
+    <Compile Include="DifficultyExpandingSorter.cs" />
+    <Compile Include="LevelDifficultyProxy.cs" />
+  </ItemGroup>
+
+  <!-- Вручную добавь ссылки к UnityEngine.dll, 0Harmony.dll и (опционально) BetterSongList dll -->
+  <ItemGroup>
+    <!-- Пример: укажи пути к твоей локальной установке Beat Saber / плагинов -->
+    <!--
+    <Reference Include="UnityEngine">
+      <HintPath>..\libs\UnityEngine.dll</HintPath>
+    </Reference>
+    <Reference Include="0Harmony">
+      <HintPath>..\libs\0Harmony.dll</HintPath>
+    </Reference>
+    -->
+  </ItemGroup>
+
+</Project>
